@@ -1,0 +1,91 @@
+// swift-tools-version:6.0
+
+import PackageDescription
+
+var package = Package(
+    name: "Merge",
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v13),
+        .tvOS(.v13),
+        .watchOS(.v6)
+    ],
+    products: [
+        .library(
+            name: "Merge",
+            targets: [
+                "CommandLineToolSupport",
+                "ShellScripting",
+                "SwiftDI",
+                "Merge"
+            ]
+        ) // Corrected: Removed the comma from this line
+    ],
+    dependencies: [
+        .package(url: "https://github.com/vmanot/Swallow.git", branch: "master"),
+        .package(url: "https://github.com/preternatural-fork/swift-subprocess.git", branch: "main")
+    ],
+    targets: [
+        .target(
+            name: "SwiftDI",
+            dependencies: [
+                "Swallow"
+            ],
+            path: "Sources/SwiftDI",
+            swiftSettings: [
+                .enableExperimentalFeature("AccessLevelOnImport"),
+                .swiftLanguageMode(.v5),
+            ]
+        ),
+        .target(
+            name: "Merge",
+            dependencies: [
+                "Swallow",
+                .product(name: "SwallowMacrosClient", package: "Swallow"),
+                "SwiftDI"
+            ],
+            path: "Sources/Merge",
+            swiftSettings: [
+                .enableExperimentalFeature("AccessLevelOnImport"),
+                .swiftLanguageMode(.v5),
+            ]
+        ),
+        .target(
+            name: "ShellScripting",
+            dependencies: [
+                "Merge",
+                .product(name: "Subprocess", package: "swift-subprocess")
+            ],
+            path: "Sources/ShellScripting",
+            swiftSettings: [
+                .enableExperimentalFeature("AccessLevelOnImport"),
+                .swiftLanguageMode(.v5),
+            ]
+        ),
+        .target(
+            name: "CommandLineToolSupport",
+            dependencies: [
+                "Merge",
+                "ShellScripting",
+                "Swallow",
+            ],
+            path: "Sources/CommandLineToolSupport",
+            swiftSettings: [
+                .enableExperimentalFeature("AccessLevelOnImport"),
+                .swiftLanguageMode(.v5),
+            ]
+        ),
+        .testTarget(
+            name: "MergeTests",
+            dependencies: [
+                "CommandLineToolSupport",
+                "Merge",
+                "ShellScripting",
+            ],
+            path: "Tests",
+            swiftSettings: [
+                .swiftLanguageMode(.v5)
+            ]
+        )
+    ]
+)
