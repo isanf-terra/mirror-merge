@@ -24,8 +24,7 @@ var package = Package(
     // Assuming you have updated the URLs to your mirrors
     dependencies: [
         .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
-        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main"),
-        .package(url: "https://github.com/isanf-terra/mirror-swiftuix.git", branch: "main")
+        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main")
     ],
     targets: [
         .target(
@@ -46,7 +45,6 @@ var package = Package(
                 // Corrected: Specify both product and package name
                 .product(name: "Swallow", package: "mirror-swallow"),
                 .product(name: "SwallowMacrosClient", package: "mirror-swallow"),
-                .product(name: "SwiftUIX", package: "mirror-swiftuix"),
                 "SwiftDI"
             ],
             path: "Sources/Merge",
