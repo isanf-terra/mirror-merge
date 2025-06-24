@@ -24,7 +24,7 @@ var package = Package(
     // Assuming you have updated the URLs to your mirrors
     dependencies: [
         .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
-        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main")
+        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "iOS13")
     ],
     targets: [
         .target(
