@@ -22,7 +22,7 @@ var package = Package(
         ) // Corrected: Removed the comma from this line
     ],
     dependencies: [
-        .package(url: "https://github.com/vmanot/Swallow.git", branch: "master"),
+        .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
         .package(url: "https://github.com/preternatural-fork/swift-subprocess.git", branch: "main")
     ],
     targets: [
