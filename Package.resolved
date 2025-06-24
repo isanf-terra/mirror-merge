@@ -1,15 +1,6 @@
 {
-  "originHash" : "3df5e08bdf66d10cc7175df75dcc4ae9caed3e7812905a976d4085c6a99c1f79",
+  "originHash" : "da66429c856f579c8b7e074ca697a126e47b688d94f113065ba8ee26fe420304",
   "pins" : [
-    {
-      "identity" : "mirror-subproces",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/isanf-terra/mirror-subproces.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "a77bd32a95bb41ba7f0141736e23524801d60467"
-      }
-    },
     {
       "identity" : "mirror-swallow",
       "kind" : "remoteSourceControl",
@@ -44,15 +35,6 @@
       "state" : {
         "revision" : "0687f71944021d616d34d922343dcef086855920",
         "version" : "600.0.1"
-      }
-    },
-    {
-      "identity" : "swift-system",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/apple/swift-system",
-      "state" : {
-        "revision" : "61e4ca4b81b9e09e2ec863b00c340eb13497dac6",
-        "version" : "1.5.0"
       }
     }
   ],

@@ -15,7 +15,6 @@ var package = Package(
             name: "Merge",
             targets: [
                 "CommandLineToolSupport",
-                "ShellScripting",
                 "SwiftDI",
                 "Merge"
             ]
@@ -23,8 +22,8 @@ var package = Package(
     ],
     // Assuming you have updated the URLs to your mirrors
     dependencies: [
-        .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
-        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main")
+        // mirror-subproces dependency removed
+        .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main")
     ],
     targets: [
         .target(
@@ -53,24 +52,12 @@ var package = Package(
                 .swiftLanguageMode(.v5),
             ]
         ),
-        .target(
-            name: "ShellScripting",
-            dependencies: [
-                "Merge",
-                // Corrected: Specify the correct package name for the Subprocess product
-                .product(name: "Subprocess", package: "mirror-subproces")
-            ],
-            path: "Sources/ShellScripting",
-            swiftSettings: [
-                .enableExperimentalFeature("AccessLevelOnImport"),
-                .swiftLanguageMode(.v5),
-            ]
-        ),
+        // ShellScripting target has been deleted.
         .target(
             name: "CommandLineToolSupport",
             dependencies: [
                 "Merge",
-                "ShellScripting",
+                // "ShellScripting" dependency removed
                 // Corrected: Specify both product and package name
                 .product(name: "Swallow", package: "mirror-swallow"),
             ],
@@ -85,7 +72,7 @@ var package = Package(
             dependencies: [
                 "CommandLineToolSupport",
                 "Merge",
-                "ShellScripting",
+                // "ShellScripting" dependency removed
             ],
             path: "Tests",
             swiftSettings: [
