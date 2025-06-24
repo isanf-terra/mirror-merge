@@ -1,13 +1,13 @@
 {
-  "originHash" : "2c619ea3bcb438e701705c3d668a8d05d80323dfada648e494e7569adae2ea3b",
+  "originHash" : "3df5e08bdf66d10cc7175df75dcc4ae9caed3e7812905a976d4085c6a99c1f79",
   "pins" : [
     {
       "identity" : "mirror-subproces",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/isanf-terra/mirror-subproces.git",
       "state" : {
-        "branch" : "iOS13",
-        "revision" : "cd08790f3936eeaeaa641e68dade9222aba4022b"
+        "branch" : "main",
+        "revision" : "a77bd32a95bb41ba7f0141736e23524801d60467"
       }
     },
     {

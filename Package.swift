@@ -5,7 +5,7 @@ import PackageDescription
 var package = Package(
     name: "Merge",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v15),
         .macOS(.v13),
         .tvOS(.v13),
         .watchOS(.v6)
@@ -24,7 +24,7 @@ var package = Package(
     // Assuming you have updated the URLs to your mirrors
     dependencies: [
         .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
-        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "iOS13")
+        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main")
     ],
     targets: [
         .target(
