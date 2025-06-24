@@ -1,5 +1,5 @@
 {
-  "originHash" : "3df5e08bdf66d10cc7175df75dcc4ae9caed3e7812905a976d4085c6a99c1f79",
+  "originHash" : "c97b836d1ecd59ce76e12fa22403122d141d8e0808f62a60bf0be7015e62f6e1",
   "pins" : [
     {
       "identity" : "mirror-subproces",
@@ -17,6 +17,15 @@
       "state" : {
         "branch" : "main",
         "revision" : "026281e083f3b6790962d6704e1008e555845b84"
+      }
+    },
+    {
+      "identity" : "mirror-swiftuix",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/isanf-terra/mirror-swiftuix.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "72ce1fe3e6ed1e3770308f748cb4ee9f545528e1"
       }
     },
     {
