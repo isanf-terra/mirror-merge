@@ -1,13 +1,22 @@
 {
-  "originHash" : "942ef2c2ec3263a5f129414aaa2517dd497b9bd1e30bea2be6f35f0c0b44fd83",
+  "originHash" : "3df5e08bdf66d10cc7175df75dcc4ae9caed3e7812905a976d4085c6a99c1f79",
   "pins" : [
     {
-      "identity" : "swallow",
+      "identity" : "mirror-subproces",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vmanot/Swallow.git",
+      "location" : "https://github.com/isanf-terra/mirror-subproces.git",
       "state" : {
-        "branch" : "master",
-        "revision" : "6a996c765a000e6c744276300ac5c01c86070fe1"
+        "branch" : "main",
+        "revision" : "274031e8aaa22ede6463552a09670957500d3110"
+      }
+    },
+    {
+      "identity" : "mirror-swallow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/isanf-terra/mirror-swallow.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "026281e083f3b6790962d6704e1008e555845b84"
       }
     },
     {
@@ -29,21 +38,12 @@
       }
     },
     {
-      "identity" : "swift-subprocess",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swiftlang/swift-subprocess.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "80bd50f91abf49164156b61c1071821927242c62"
-      }
-    },
-    {
       "identity" : "swift-syntax",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/swift-precompiled/swift-syntax",
+      "location" : "https://github.com/swiftlang/swift-syntax.git",
       "state" : {
-        "branch" : "release/6.1",
-        "revision" : "fc197a24fb2e77609fbe3d94624e36f84d758099"
+        "revision" : "0687f71944021d616d34d922343dcef086855920",
+        "version" : "600.0.1"
       }
     },
     {

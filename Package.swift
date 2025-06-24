@@ -19,17 +19,19 @@ var package = Package(
                 "SwiftDI",
                 "Merge"
             ]
-        ) // Corrected: Removed the comma from this line
+        )
     ],
+    // Assuming you have updated the URLs to your mirrors
     dependencies: [
         .package(url: "https://github.com/isanf-terra/mirror-swallow.git", branch: "main"),
-        .package(url: "https://github.com/preternatural-fork/swift-subprocess.git", branch: "main")
+        .package(url: "https://github.com/isanf-terra/mirror-subproces.git", branch: "main")
     ],
     targets: [
         .target(
             name: "SwiftDI",
             dependencies: [
-                "Swallow"
+                // Corrected: Specify both product and package name
+                .product(name: "Swallow", package: "mirror-swallow")
             ],
             path: "Sources/SwiftDI",
             swiftSettings: [
@@ -40,8 +42,9 @@ var package = Package(
         .target(
             name: "Merge",
             dependencies: [
-                "Swallow",
-                .product(name: "SwallowMacrosClient", package: "Swallow"),
+                // Corrected: Specify both product and package name
+                .product(name: "Swallow", package: "mirror-swallow"),
+                .product(name: "SwallowMacrosClient", package: "mirror-swallow"),
                 "SwiftDI"
             ],
             path: "Sources/Merge",
@@ -54,7 +57,8 @@ var package = Package(
             name: "ShellScripting",
             dependencies: [
                 "Merge",
-                .product(name: "Subprocess", package: "swift-subprocess")
+                // Corrected: Specify the correct package name for the Subprocess product
+                .product(name: "Subprocess", package: "mirror-subproces")
             ],
             path: "Sources/ShellScripting",
             swiftSettings: [
@@ -67,7 +71,8 @@ var package = Package(
             dependencies: [
                 "Merge",
                 "ShellScripting",
-                "Swallow",
+                // Corrected: Specify both product and package name
+                .product(name: "Swallow", package: "mirror-swallow"),
             ],
             path: "Sources/CommandLineToolSupport",
             swiftSettings: [
